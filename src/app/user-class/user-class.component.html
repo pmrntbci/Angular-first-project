@@ -1,0 +1,19 @@
+<p>user-class works!</p>
+
+<div>
+    <h1>{{user.name}}</h1>
+    <h3>{{user.designation}}</h3>
+    <p>{{user.address}}</p>
+    <button (click)="toggleCollapse()"> Expand </button>
+    <div  *ngIf=!isCollapsed>
+        <p>Phone:</p>
+        <span *ngFor="let phoneNumber of user.phone">{{phoneNumber}}, &nbsp;</span>
+    </div>
+    
+    <div>
+    <br>
+    <p>2 way Data Binding</p>
+    <br>
+    <input type="text" [(ngModel)]="inputText"><span>&nbsp;{{inputText}}</span>
+    </div>
+</div>

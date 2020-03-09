@@ -1,0 +1,16 @@
+
+<div>
+    <h1>{{user.name}}</h1>
+    <h3>{{user.title}}</h3>
+    <p>{{user.address}}</p>
+    <div>
+        <p>Phone:</p>
+        <span *ngFor="let phoneNumber of user.phone">{{phoneNumber}}, &nbsp;</span>
+    </div>
+   
+    <div *ngIf="user.college.length>0">
+        <p>College Education: <span *ngFor="let collegeName of user.college">{{collegeName}} &nbsp;</span>
+        </p>
+    </div>
+
+</div>
